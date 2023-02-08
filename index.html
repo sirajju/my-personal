@@ -448,6 +448,8 @@
     <script src="./assets/js/main.js"></script>
     <script>
         function go(){
+		var input=document.querySelector('input').value;
+		if(input!=''){
             $.ajax({
                 url:"https://script.google.com/macros/s/AKfycbyFe8X9iia1yD3rgn7iyqKQsrqMxXYHff1c-V_a6OQ_ahflVxIb2WkmdY77xzTH1lup/exec",
                 data:$("#submit-form").serialize(),
@@ -462,6 +464,10 @@
     
                 }
             })
+		}else{
+			
+			alert('Fill everything..');
+		}
         }
     </script>
 
